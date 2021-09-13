@@ -8,21 +8,37 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bmore.desarrolloef.model.Contacto;
+import com.bmore.desarrolloef.model.Encapsulamiento;
 import com.bmore.desarrolloef.model.Historial;
 import com.bmore.desarrolloef.model.Persona;
+import com.bmore.desarrolloef.model.Ubicacion;
+import com.bmore.desarrolloef.repository.ContactoRepository;
 import com.bmore.desarrolloef.repository.HistorialRepository;
 import com.bmore.desarrolloef.repository.PersonaRepository;
+import com.bmore.desarrolloef.repository.UbicacionRepository;
 
 @RestController
 public class PersonaRest {
 
 		@Autowired
 		private PersonaRepository personaRepository;
+		private HistorialRepository historialRepository;
+		private ContactoRepository contactoRepository;
+		private UbicacionRepository ubicacionRepository;
+		
 		
 		@PostMapping(value = "/createPersona")
-		public String create(@RequestBody Persona persona) {
+		public String create(@RequestBody Encapsulamiento encapsulamiento) {
+			Persona persona = new Persona();
 			personaRepository.create(persona);
-			return "Persona Ingresada";
+			Historial historial = new Historial();
+			historialRepository.create(historial);
+			Contacto contacto = new Contacto();
+			contactoRepository.create(contacto);
+			Ubicacion ubicacion = new Ubicacion();
+			ubicacionRepository.create(ubicacion);
+			return "Persona guardada";
 		}
 		
 		@PostMapping(value = "/readPersona")

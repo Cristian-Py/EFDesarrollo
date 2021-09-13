@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bmore.desarrolloef.model.Historial;
+import com.bmore.desarrolloef.model.Persona;
 import com.bmore.desarrolloef.model.Ubicacion;
+import com.bmore.desarrolloef.repository.HistorialRepository;
+import com.bmore.desarrolloef.repository.PersonaRepository;
 import com.bmore.desarrolloef.repository.UbicacionRepository;
 
 
@@ -18,7 +22,7 @@ public class ubicacionRest {
 	
 	@Autowired
 	private UbicacionRepository ubicacionRepository;
-	
+
 	@PostMapping(value = "/createUbicacion")
 	public String create(@RequestBody Ubicacion ubicacion) {
 		ubicacionRepository.create(ubicacion);
