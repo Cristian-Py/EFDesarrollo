@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bmore.desarrolloef.model.Contacto;
@@ -28,17 +29,15 @@ public class PersonaRest {
 		private UbicacionRepository ubicacionRepository;
 		
 		
-		@PostMapping(value = "/createPersona")
-		public String create(@RequestBody Encapsulamiento encapsulamiento) {
-			Persona persona = new Persona();
-			personaRepository.create(persona);
-			Historial historial = new Historial();
-			historialRepository.create(historial);
-			Contacto contacto = new Contacto();
-			contactoRepository.create(contacto);
-			Ubicacion ubicacion = new Ubicacion();
-			ubicacionRepository.create(ubicacion);
+		@PostMapping(value = "/createPersonas")
+		public String create(@RequestBody Encapsulamiento encapsulamiento) {	
 			return "Persona guardada";
+		}
+		
+		@PostMapping(value = "/createPersona")
+		public String create(@RequestBody Persona persona) {
+			personaRepository.create(persona);
+			return "Persona agregada";
 		}
 		
 		@PostMapping(value = "/readPersona")

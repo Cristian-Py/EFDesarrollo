@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import com.bmore.desarrolloef.model.Contacto;
@@ -18,6 +19,7 @@ public class ContactoRepositoryImpl implements ContactoRepository{
 	
 	@Override
 	public void create(Contacto contacto) {
+		
 		Object[]  parametros = {
 				contacto.getTelefono(),
 				contacto.getTipo(),
