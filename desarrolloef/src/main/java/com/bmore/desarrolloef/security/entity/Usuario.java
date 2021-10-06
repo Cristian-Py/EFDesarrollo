@@ -1,4 +1,4 @@
-package com.tutorial.crud.security.entity;
+package com.bmore.desarrolloef.security.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

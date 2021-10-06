@@ -1,5 +1,4 @@
-package com.tutorial.crud.security.dto;
-
+package com.bmore.desarrolloef.security.dto;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.util.HashSet;

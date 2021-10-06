@@ -1,9 +1,12 @@
-package com.tutorial.crud.security.entity;
+package com.bmore.desarrolloef.security.entity;
 
-import com.tutorial.crud.security.enums.RolNombre;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
+
+
+import com.bmore.desarrolloef.security.enums.RolNombre;
 
 @Entity
 public class Rol {

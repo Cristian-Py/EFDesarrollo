@@ -1,4 +1,4 @@
-package com.tutorial.crud.security.enums;
+package com.bmore.desarrolloef.security.enums;
 
 public enum RolNombre {
     ROLE_ADMIN, ROLE_USER

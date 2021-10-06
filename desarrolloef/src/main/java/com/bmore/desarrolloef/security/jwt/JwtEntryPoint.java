@@ -1,4 +1,4 @@
-package com.tutorial.crud.security.jwt;
+package com.bmore.desarrolloef.security.jwt;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

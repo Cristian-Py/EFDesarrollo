@@ -1,10 +1,12 @@
-package com.tutorial.crud.security.service;
+package com.bmore.desarrolloef.security.service;
 
-import com.tutorial.crud.security.entity.Usuario;
-import com.tutorial.crud.security.repository.UsuarioRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.bmore.desarrolloef.security.entity.Usuario;
+import com.bmore.desarrolloef.security.repository.UsuarioRepository;
 
 import java.util.Optional;
 

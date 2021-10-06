@@ -1,8 +1,9 @@
-package com.tutorial.crud.security.repository;
+package com.bmore.desarrolloef.security.repository;
 
-import com.tutorial.crud.security.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.bmore.desarrolloef.security.entity.Usuario;
 
 import java.util.Optional;
 

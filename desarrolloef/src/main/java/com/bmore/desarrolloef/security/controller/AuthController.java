@@ -1,15 +1,10 @@
-package com.tutorial.crud.security.controller;
+package com.bmore.desarrolloef.security.controller;
 
-import com.tutorial.crud.dto.Mensaje;
-import com.tutorial.crud.security.dto.JwtDto;
-import com.tutorial.crud.security.dto.LoginUsuario;
-import com.tutorial.crud.security.dto.NuevoUsuario;
-import com.tutorial.crud.security.entity.Rol;
-import com.tutorial.crud.security.entity.Usuario;
-import com.tutorial.crud.security.enums.RolNombre;
-import com.tutorial.crud.security.jwt.JwtProvider;
-import com.tutorial.crud.security.service.RolService;
-import com.tutorial.crud.security.service.UsuarioService;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,9 +17,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.HashSet;
-import java.util.Set;
+import com.bmore.desarrolloef.model.Mensaje;
+import com.bmore.desarrolloef.security.dto.JwtDto;
+import com.bmore.desarrolloef.security.dto.LoginUsuario;
+import com.bmore.desarrolloef.security.dto.NuevoUsuario;
+import com.bmore.desarrolloef.security.entity.Rol;
+import com.bmore.desarrolloef.security.entity.Usuario;
+import com.bmore.desarrolloef.security.enums.RolNombre;
+import com.bmore.desarrolloef.security.jwt.JwtProvider;
+import com.bmore.desarrolloef.security.service.RolService;
+import com.bmore.desarrolloef.security.service.UsuarioService;
 
 @RestController
 @RequestMapping("/auth")

@@ -1,12 +1,14 @@
-package com.tutorial.crud.security.jwt;
+package com.bmore.desarrolloef.security.jwt;
 
-import com.tutorial.crud.security.entity.UsuarioPrincipal;
+
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
+
+import com.bmore.desarrolloef.security.entity.UsuarioPrincipal;
 
 import java.util.Date;
 

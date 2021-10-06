@@ -1,4 +1,4 @@
-package com.tutorial.crud.security.entity;
+package com.bmore.desarrolloef.security.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
