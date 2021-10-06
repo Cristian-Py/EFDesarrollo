@@ -24,13 +24,11 @@ public class UbicacionRepositoryImpl implements UbicacionRepository{
 			ubicacion.getColonia(),
 			ubicacion.getPais(),
 			ubicacion.getEstado(),
-			ubicacion.getPais_id(),
-			ubicacion.getEstado_id(),
-			ubicacion.getEstado_id(),
+			ubicacion.getPersona_id()
 		};
 		JdbcTemplate.update("INSERT INTO ubicacion (direccion, noInterno, noExterno,"
-				+ "colonia, pais, estado, persona_id, pais_id, estado_id)"
-				+ " VALUES(? , ?, ?, ?, ? ,? ,?, ?, ?)",parametros);
+				+ "colonia, pais, estado, persona_id)"
+				+ " VALUES(?,?,?,?,?,?,?)",parametros);
 	}
 
 	@Override
@@ -48,9 +46,7 @@ public class UbicacionRepositoryImpl implements UbicacionRepository{
 				ubicacion.getColonia(),
 				ubicacion.getPais(),
 				ubicacion.getEstado(),
-				ubicacion.getPais_id(),
-				ubicacion.getEstado_id(),
-				ubicacion.getEstado_id(),
+				ubicacion.getPersona_id()
 			};
 		JdbcTemplate.update("UPDATE ubicacion SET direccion = ?, noInterno = ?, noExterno = ?, "
 				+ "colonia = ?, pais = ?, estado= ?",parametros);

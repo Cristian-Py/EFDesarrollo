@@ -24,15 +24,24 @@ public class PersonaRest {
 
 		@Autowired
 		private PersonaRepository personaRepository;
+		@Autowired
 		private HistorialRepository historialRepository;
+		@Autowired
 		private ContactoRepository contactoRepository;
+		@Autowired
 		private UbicacionRepository ubicacionRepository;
 		
 		
-		@PostMapping(value = "/createPersonas")
-		public String create(@RequestBody Encapsulamiento encapsulamiento) {	
-			return "Persona guardada";
+		@PostMapping(value = "/guardarPersona")
+		public Encapsulamiento orderPerso(@RequestBody Encapsulamiento request) {
+			personaRepository.create(request.getPersona());
+			historialRepository.create(request.getHistorial());
+			contactoRepository.create(request.getContacto());
+			ubicacionRepository.create(request.getUbicacion());
+			return request;
 		}
+		
+
 		
 		@PostMapping(value = "/createPersona")
 		public String create(@RequestBody Persona persona) {

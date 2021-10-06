@@ -25,7 +25,7 @@ public class ContactoRepositoryImpl implements ContactoRepository{
 				contacto.getTipo(),
 				contacto.getPersona_id()
 		};
-		JdbcTemplate.update("INSERT INTO contacto (telefono, tipo, persona_id) VALUES (?,?,?)",parametros);
+		JdbcTemplate.update("INSERT INTO contactos (telefono, tipo, persona_id) VALUES (?,?,?)",parametros);
 		
 	}
 

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Persona {
 	private int personaId;
-	private String nombreP;
+	private String nombre;
 	private String apePaterno;
 	private String apeMaterno;
 	private String sexo;
@@ -17,11 +17,11 @@ public class Persona {
 	}
 	
 	
-	public Persona(int personaId, String nombreP, String apePaterno, String apeMaterno, String sexo, Date fecha,
+	public Persona(int personaId, String nombre, String apePaterno, String apeMaterno, String sexo, Date fecha,
 			String curp) {
 		super();
 		this.personaId = personaId;
-		this.nombreP = nombreP;
+		this.nombre = nombre;
 		this.apePaterno = apePaterno;
 		this.apeMaterno = apeMaterno;
 		this.sexo = sexo;
@@ -36,11 +36,11 @@ public class Persona {
 	public void setPersonaId(int personaId) {
 		this.personaId = personaId;
 	}
-	public String getNombreP() {
-		return nombreP;
+	public String getNombre() {
+		return nombre;
 	}
-	public void setNombreP(String nombreP) {
-		this.nombreP = nombreP;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 	public String getApePaterno() {
 		return apePaterno;
@@ -74,7 +74,7 @@ public class Persona {
 	}
 	@Override
 	public String toString() {
-		return "Persona [personaId=" + personaId + ", nombre=" + nombreP + ", apePaterno=" + apePaterno + ", apeMaterno="
+		return "Persona [personaId=" + personaId + ", nombre=" + nombre + ", apePaterno=" + apePaterno + ", apeMaterno="
 				+ apeMaterno + ", sexo=" + sexo + ", fecha=" + fecha + ", curp=" + curp + "]";
 	}
 	

@@ -18,11 +18,11 @@ public class PersonaRepositoryImpl implements PersonaRepository {
 
 	@Override
 	public void create(Persona persona) {
-		Object[] parametros = { persona.getNombreP(), persona.getApePaterno(), persona.getApeMaterno(),
+		Object[] parametros = { persona.getNombre(), persona.getApePaterno(), persona.getApeMaterno(),
 				persona.getSexo(), persona.getFecha(), persona.getCurp(),
 
 		};
-		jdbcTemplate.update("INSERT INTO persona (nombreP, apePaterno,"
+		jdbcTemplate.update("INSERT INTO persona (nombre, apePaterno,"
 				+ "apeMaterno, sexo, fecha,curp) VALUES(?,?,?,?,?,?)",parametros);
 	}
 
@@ -34,11 +34,11 @@ public class PersonaRepositoryImpl implements PersonaRepository {
 
 	@Override
 	public void update(Persona persona) {
-		Object[] parametros = { persona.getNombreP(), persona.getApePaterno(), persona.getApeMaterno(),
+		Object[] parametros = { persona.getNombre(), persona.getApePaterno(), persona.getApeMaterno(),
 				persona.getSexo(), persona.getFecha(), persona.getCurp(),
 
 		};
-		jdbcTemplate.update("UPDATE persona SET nombreP = ?, apePaterno = ?,"
+		jdbcTemplate.update("UPDATE persona SET nombre = ?, apePaterno = ?,"
 				+ "apeMaterno=?, sexo=?,fecha=?, curp=? WHERE personaId = ?", parametros);
 
 	}
